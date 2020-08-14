@@ -53,7 +53,8 @@ exports.handler = (event, context, callback) => {
                 body: JSON.stringify([
                     {
                         'marketCap': 34463.71,
-                        'usGDP': 19.41
+                        'usGDP': 19.41,
+                        'buffetRatio': 1.75
                     }
                 ]),
             });

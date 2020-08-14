@@ -35,7 +35,9 @@ const getResults = async () => {
     //     });
     // });
 
-    return $
+    console.log('Hello world')
+
+    return
 };
 
 exports.handler = (event, context, callback) => {
@@ -48,7 +50,11 @@ exports.handler = (event, context, callback) => {
                     'Access-Control-Allow-Methods': 'GET',
                     "Access-Control-Allow-Origin": "*", // Required for CORS support to work
                 },
-                body: res,
+                body: JSON.stringify([
+                    {
+                        'bird': 'word'
+                    }
+                ]),
             });
         })
         .catch((err) => {

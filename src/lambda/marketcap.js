@@ -52,7 +52,8 @@ exports.handler = (event, context, callback) => {
                 },
                 body: JSON.stringify([
                     {
-                        'bird': 'word'
+                        'marketCap': 34463.71,
+                        'usGDP': 19.41
                     }
                 ]),
             });

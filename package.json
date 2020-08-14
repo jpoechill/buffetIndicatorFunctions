@@ -1,0 +1,27 @@
+{
+  "name": "buffetfunctions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "build:lambda": "netlify-lambda build src/lambda"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpoechill/buffetIndicatorFunctions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpoechill/buffetIndicatorFunctions/issues"
+  },
+  "homepage": "https://github.com/jpoechill/buffetIndicatorFunctions#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "netlify-lambda": "^1.5.1"
+  }
+}

@@ -14,8 +14,7 @@ const fetchData = async () => {
 const getResults = async () => {
     const $ = await fetchData();
 
-    // clear the cache, or you will see data from prev call!
-    articles.clear();
+    articles.clear(); // clear the cache, or you will see data from prev call!
 
     $("article[class=dboom-article-most-recent]").each((index, element) => {
         let title = $('.dboom-title', element).text().substr(1)
@@ -41,15 +40,19 @@ const getResults = async () => {
 exports.handler = (event, context, callback) => {
     getResults()
         .then((res) => {
-            callback(null, {
-                statusCode: 200,
-                headers: {
-                    'content-type': 'application/json',
-                    'Access-Control-Allow-Methods': 'GET',
-                    "Access-Control-Allow-Origin": "*", // Required for CORS support to work
-                },
-                body: JSON.stringify([...res]),
-            });
+            // if (event.httpMethod !== "POST") {
+                callback(null, {
+                    statusCode: 200,
+                    headers: {
+                        'content-type': 'application/json',
+                        'Access-Control-Allow-Methods': 'GET',
+                        "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+                        // "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
+                        // "Cache-Control": "no-transform"
+                    },
+                    body: JSON.stringify([...res]),
+                });
+            // }
         })
         .catch((err) => {
             callback(err);

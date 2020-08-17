@@ -55,6 +55,40 @@ exports.handler = (event, context, callback) => {
                         'marketCap': 34463.71,
                         'usGDP': 19.41,
                         'buffetRatio': 1.75
+                    },
+                    {
+                        type: 'stocks',
+                        items: [
+                            {
+                                name: 'NVDA',
+                                risk: 'med',
+                                growth: ''
+                            },
+                            {
+                                name: 'SEDG',
+                                risk: 'med',
+                                growth: ''
+                            },
+                        ]
+                    }, {
+                        type: 'etfs',
+                        items: [
+                            {
+                                name: 'ARKK',
+                                risk: 'med',
+                                holdings: []
+                            },
+                            {
+                                name: 'TAN',
+                                risk: 'med',
+                                holdings: []
+                            },
+                            {
+                                name: 'FAN',
+                                risk: 'low',
+                                holdings: []
+                            },
+                        ]
                     }
                 ]),
             });

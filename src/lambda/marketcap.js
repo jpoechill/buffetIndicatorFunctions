@@ -57,7 +57,12 @@ exports.handler = (event, context, callback) => {
                         'buffetRatio': 1.75
                     },
                     {
-                        type: 'stocks',
+                        type: 'stocksILike',
+                        notes: [
+                            'should-do-well',
+                            'promising',
+                            'track-record'
+                        ],
                         items: [
                             {
                                 name: 'NVDA',
@@ -71,22 +76,27 @@ exports.handler = (event, context, callback) => {
                             },
                         ]
                     }, {
-                        type: 'etfs',
+                        type: 'etfsILike',
                         items: [
                             {
                                 name: 'ARKK',
                                 risk: 'med',
-                                holdings: []
+                                holdings: ['TSLA', 'NVTA', 'SQ', 'CRSP']
+                            },
+                            {
+                                name: 'SMH',
+                                risk: 'med',
+                                holdings: ['TSM', 'NVDA', 'INTL', 'AMD']
                             },
                             {
                                 name: 'TAN',
                                 risk: 'med',
-                                holdings: []
+                                holdings: ['SEDG', 'RUN', 'ENPH', 'FSLR']
                             },
                             {
                                 name: 'FAN',
                                 risk: 'low',
-                                holdings: []
+                                holdings: ['ORSTED', 'NPI.TO', 'SGRE.BC']
                             },
                         ]
                     }
